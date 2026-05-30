@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-mono: var(--font-space-grotesk), monospace;
+  --font-syne: var(--font-syne), sans-serif;
+  
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-slow: marquee 45s linear infinite;
+  
+  --shadow-brutalist: 4px 4px 0px 0px #060606;
+  --shadow-brutalist-lime: 5px 5px 0px 0px #dffe00;
+  --shadow-brutalist-indigo: 5px 5px 0px 0px #5f5af6;
+  --shadow-brutalist-zinc: 5px 5px 0px 0px #27272a;
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+
+:root {
+  --background: #060606;
+  --foreground: #f4f4f5;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060606;
+  border-left: 1px solid #18181b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f5af6;
+}
+
+/* Custom styles for grid and marquee layout */
+.hairline-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(39, 39, 42, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(39, 39, 42, 0.2) 1px, transparent 1px);
+}
+
